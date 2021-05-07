@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://github.hkyzf.top
+url: https://blog.hkyzf.top
 date_format: "ordinal"
 title: 小屁孩的梦
 subtitle: 不忘初心，方得始终
@@ -16,7 +16,7 @@ repository: 386408003/386408003.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
   jsdelivr:
-  enabled: true
+    enabled: true
 # 可选组件配置
 components:
   # 分享
