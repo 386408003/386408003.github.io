@@ -22,13 +22,13 @@ components:
   # 分享
   # weibo,qq,wechat,douban,qzone,linkedin,facebook,twitter
   share:
-    enabled: false
-    hide-platforms: qq,facebook
+    enabled: true
+    hide-platforms: facebook,twitter
   # 不蒜子访问统计
   busuanzi:
     enabled: true
-    start_date: 2020-05-03
-  # My Popular Repositories
+    start_date: 2021-05-07
+  # 我的仓库
   side_bar_repo:
     enabled: true
     limit: 5
@@ -124,7 +124,7 @@ collections:
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk, valine
-comments_provider: gitalk
+comments_provider: valine
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
