@@ -1,0 +1,17 @@
+# 关于页面 技能标签下的显示内容
+
+- name: 软件工程师
+  keywords:
+    - Java
+    - Python
+    - Linux
+    - Git
+    - Maven
+    - Spring Boot
+
+- name: 爱好
+  keywords:
+    - 我的世界
+    - 饥荒
+    - 暗黑破坏神II
+    - 仙剑奇侠传
