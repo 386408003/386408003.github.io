@@ -1,12 +1,12 @@
 ---
-layout: wiki
-title: 时间以及时区
-categories: time
+layout: post
+title: 时间格式和时区
+categories: Java
 description: 一直以来都搞不懂这些时间格式，以后就在这里记录吧。
 keywords: GMT, UTC, DST, CST, CET, ISO8601, timezone, date, time
 ---
 
-
+> 一直以来都搞不懂这些时间格式，以后忘记了可以来查。
 
 # 名词解释：
 
