@@ -75,7 +75,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
   - categories.html    分类页面布局
   - compress.html    暂时不知道什么作用
   - default.html    默认布局
-  - mindmap.html    暂时不知道什么作用
+  - mindmap.html    思维导图页面布局
   - page.html    维基、链接、关于页面布局
   - post.html    文章内容页面布局
   - wiki.html    暂时没有用
@@ -86,7 +86,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
   
 - _wiki    已发布的 wiki(维基) 页面
   
-  - template.md    已发布的 wiki 页面模板
+  - template.md    已发布的 wiki 页面模板(页面可搜索到)
   
 - assets    资源文件夹 css/js/images
 
@@ -97,11 +97,11 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
   - 404.html    腾讯公益404，暂时没用
   - 404.md    404页面
   - about.md    关于页面
-  - archives.md    归档
+  - archives.md    归档页面
   - categories.md    分类页面
   - links.md    链接页面
-  - mindmap-viewer.md    暂时不知道什么作用
-  - open-source.md    我的Github开源项目
+  - mindmap-viewer.md    思维导图模板页(页面可搜索到)
+  - open-source.md    我的Github开源项目页面
   - wiki.md    维基页面
   
 - _config.yml    主配置文件
