@@ -139,7 +139,4 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 https://cdn.jsdelivr.net/gh/
 
-待修改：
-
-- mzlogin
-- mazhuang.org
+待修改：全文搜索 mazhuang.org —— 谷歌广告相关代码
