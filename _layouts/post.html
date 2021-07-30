@@ -18,6 +18,14 @@ layout: default
             <span class="octicon octicon-calendar"></span> {{ page.date | date: "%Y/%m/%d" }}
           </span>
           {% endif %}
+          <!-- id 将作为查询条件 -->
+          <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
+            <span class="meta-info">
+              <span class="octicon octicon-eye"></span>
+              <span class="leancloud-visitors-count">0</span>
+              <span class="post-meta-item-text">次访问 </span>
+            </span>
+          </span>
           {% for cat in page.categories %}
           <span class="meta-info">
             <span class="octicon octicon-file-directory"></span>

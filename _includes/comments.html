@@ -38,9 +38,8 @@
   {% case site.comments_provider %}
     {% when 'disqus' %}
       {% if site.disqus and site.disqus.username %}
-        {% assign load_disqus = true %}
+        {% assign load_disqus = false %}
         {% if site.disqus.username == '386408003' %}
-          {% assign load_disqus = false %}
           {% if site.url contains 'hkyzf.top' %}
             {% assign load_disqus = true %}
           {% endif %}
@@ -105,11 +104,11 @@
       </script>
     {% when 'valine' %}
       {% if site.valine.app_id %}
-        {% assign load_disqus = false %}
+        {% assign load_valine = false %}
         {% if site.url contains 'hkyzf.top' %}
-          {% assign load_disqus = true %}
+          {% assign load_valine = true %}
         {% endif %}
-        {% if load_disqus %}
+        {% if load_valine %}
           <div id="vcomments"></div>
           <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
           <script>
