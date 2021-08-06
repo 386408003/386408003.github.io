@@ -15,14 +15,14 @@ keywords: Java, Spring, Spring MVC, Spring Boot
 >
 > 首先雷神教程在这里：[雷神](https://www.bilibili.com/video/BV19K4y1L7MT) ，官网手册在这里：[Spring Boot 手册](https://docs.spring.io/spring-boot/docs/2.4.3/reference/html/index.html)
 
-## 1. SpringBoot 底层注解
+## SpringBoot 底层注解
 
-### 1.1 组件添加
+### 1. 组件添加
 
-#### 1、@Configuration、@Bean
+#### 1.1 @Configuration、@Bean
 
 ```java
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.config;
 
 import org.springframework.context.annotation.Bean;
@@ -61,7 +61,7 @@ public class MyConfig {
     }
 }
 
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot;
 
 import org.springframework.boot.SpringApplication;
@@ -110,7 +110,7 @@ public class MainApplication {
 }
 ```
 
-#### 2、@Component、@Controller、@Service、@Repository
+#### 1.2 @Component、@Controller、@Service、@Repository
 
 - @Component 代表所标注的类是一个组件
 
@@ -122,13 +122,14 @@ public class MainApplication {
 
   **其实并没有什么区别！**
 
-#### 3、@ComponentScan、@Import
+#### 1.3 @ComponentScan、@Import
 
-- @ComponentScan 组件扫描，指定了要扫描的包
+- [@ComponentScan](https://www.bilibili.com/video/BV1gW411W7wy?p=3) 组件扫描，指定了要扫描的包，详情可查看此链接。
 - @Import 导入一个组件
+- [@Import](https://www.bilibili.com/video/BV1gW411W7wy?p=8) 高级用法，详情可查看此链接。
 
 ```java
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.config;
 
 import ch.qos.logback.core.db.DBHelper;
@@ -139,19 +140,12 @@ import top.hkyzf.boot.bean.Pet;
 import top.hkyzf.boot.bean.User;
 
 /**
- * 1、配置类里面使用 @Bean 标注在方法上给容器注册组件，默认单实例。
- * 2、配置类本身也是组件。
- * 3、proxyBeanMethods 代理 bean 的方法。
- *      Full 模式（proxyBeanMethods = true）[每个 @Bean 方法不管调用多少次都是单实例]
- *      Lite 模式（proxyBeanMethods = false）[每个 @Bean 方法调用多少次都是新创建的]
- *      组件依赖必须使用 Full 模式，其他情况可使用 Lite 模式
  * 4、@Import({User.class, DBHelper.class})
  *      给容器中自动创建出这两个类型的组件，默认组件名字是全类名。
  *
  * @author 朱峰
  * @date 2021-8-4 16:07
  */
-// 告诉 SpringBoot 这是一个配置类 == 配置文件
 @Import({User.class, DBHelper.class})
 @Configuration(proxyBeanMethods = false)
 public class MyConfig {
@@ -173,7 +167,7 @@ public class MyConfig {
     }
 }
 
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot;
 
 import ch.qos.logback.core.db.DBHelper;
@@ -211,14 +205,14 @@ public class MainApplication {
 
 
 
-#### 4、@Conditional
+#### 1.4 @Conditional
 
 条件装配：满足 @Conditional 指定的条件，则进行组件注入。
 
 ![](/images/posts/java/springboot/20210804172916.png)
 
 ```java
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.config;
 
 import ch.qos.logback.core.db.DBHelper;
@@ -267,7 +261,7 @@ public class MyConfig {
     }
 }
 
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot;
 
 import org.springframework.boot.SpringApplication;
@@ -298,9 +292,9 @@ public class MainApplication {
 }
 ```
 
-### 1.2 原生配置文件引入
+### 2 原生配置文件引入
 
-#### 1、@ImportResource
+#### 2.1 @ImportResource
 
 1. 新建 beans.xml 文件，放入 src\main\resources\beans.xml 目录。
 
@@ -324,7 +318,7 @@ public class MainApplication {
 2. 可以使用 @ImportResource 注解直接导入配置文件。
 
 ```java
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.config;
 
 import org.springframework.context.annotation.ImportResource;
@@ -348,7 +342,7 @@ import org.springframework.context.annotation.ImportResource;
 public class MyConfig {
 }
 
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot;
 
 import org.springframework.boot.SpringApplication;
@@ -375,9 +369,9 @@ public class MainApplication {
 }
 ```
 
-### 1.3 属性值绑定
+### 3 属性值绑定
 
-#### 1、@ConfigurationProperties
+#### 3.1 @ConfigurationProperties
 
 1. 两种方式都可以进行属性值绑定，首先先写好配置文件。
 
@@ -395,7 +389,7 @@ mycar:
 - 方式二：@Component + @ConfigurationProperties
 
 ```java
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -436,7 +430,7 @@ public class Car {
     }
 }
 
-// ===========================================================================================
+// ========================================================================================
 package top.hkyzf.boot.config;
 
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

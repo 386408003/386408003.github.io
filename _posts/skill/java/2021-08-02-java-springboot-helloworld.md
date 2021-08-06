@@ -14,7 +14,9 @@ keywords: Java, Spring, Spring MVC, Spring Boot
 >
 > 首先雷神教程在这里：[雷神](https://www.bilibili.com/video/BV19K4y1L7MT) ，官网手册在这里：[Spring Boot 手册](https://docs.spring.io/spring-boot/docs/2.4.3/reference/html/index.html)
 
-## 1. 系统要求
+## SpringBoot 入门
+
+### 1. 系统要求
 
 1. Spring Boot 2.4.3 系统要求如下：
 
@@ -44,35 +46,35 @@ Explicit build support is provided for the following build tools:
   <localRepository>F:\Workspaces\maven\repository</localRepository>
   <!-- 镜像仓库设置为阿里云，加快下载依赖速度 -->
   <mirrors>
-	<mirror>
-		<id>alimaven</id>
-		<name>aliyun maven</name>
-		<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-		<mirrorOf>central</mirrorOf>        
+    <mirror>
+        <id>alimaven</id>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <mirrorOf>central</mirrorOf>        
     </mirror>
   </mirrors>
   <!-- 指定编译使用的版本为Jdk8 -->
   <profiles>
-	<profile>
-		<id>jdk-1.8</id>
-		<activation>
-			<activeByDefault>true</activeByDefault>
-			<jdk>1.8</jdk>
-		</activation>
-		<properties>
-			<maven.compiler.source>1.8</maven.compiler.source>
-			<maven.compiler.target>1.8</maven.compiler.target>
-			<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-		</properties>
+    <profile>
+        <id>jdk-1.8</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+            <jdk>1.8</jdk>
+        </activation>
+        <properties>
+            <maven.compiler.source>1.8</maven.compiler.source>
+            <maven.compiler.target>1.8</maven.compiler.target>
+            <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        </properties>
     </profile>
   </profiles>
 ```
 
 
 
-## 2. 新建项目
+### 2. 新建项目
 
-### 1) 编写 POM 文件
+#### 2.1 编写 POM 文件
 
 1. 使用 Idea 新建项目 boot-01-helloworld。
 
@@ -105,7 +107,7 @@ Explicit build support is provided for the following build tools:
 </project>
 ```
 
-### 2) 编写代码。
+#### 2.2 编写代码。
 
 1. 首先先编写主程序。
 
@@ -219,9 +221,9 @@ server:
    ```
 
 
-## 3. 相关特性初探
+### 3. 相关特性初探
 
-### 1) 依赖管理
+#### 3.1 依赖管理
 
 1. 父项目做依赖管理。
 
@@ -248,7 +250,7 @@ server:
     <artemis.version>2.15.0</artemis.version>
     <aspectj.version>1.9.6</aspectj.version>
     <assertj.version>3.18.1</assertj.version>
-	...
+    ...
 </properties>
 ```
 
@@ -290,11 +292,11 @@ https://docs.spring.io/spring-boot/docs/2.4.3/reference/html/using-spring-boot.h
 1、先查看需要修改的依赖在 spring-boot-dependencies 里面规定的当前依赖版本使用的 key 是什么。
 2、在当前项目重写配置即可，拿 mysql 举例：
 <properties>
-	<mysql.version>8.0.23</mysql.version>
+    <mysql.version>8.0.23</mysql.version>
 </properties>
 ```
 
-### 2) 自动配置
+#### 3.2 自动配置
 
 1. 自动配置好 Tomcat 。
 
