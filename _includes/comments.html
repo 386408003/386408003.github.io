@@ -109,7 +109,11 @@
           {% assign load_valine = true %}
         {% endif %}
         {% if load_valine %}
-          <div id="vcomments"></div>
+          <!-- 开启评论才会走到这里，首页只统计，不评论 -->
+          <!-- 设置 visitor 为 true 开启只统计模式 -->
+          {% if page.visitor != true %}
+            <div id="vcomments"></div>
+          {% endif %}
           <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
           <script>
             new Valine({

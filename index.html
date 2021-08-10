@@ -2,7 +2,7 @@
 layout: default
 class: home
 css: ['pages/index.css']
-comments: false
+visitor: true
 ---
 
 {% assign assets_base_url = site.url %}
@@ -153,5 +153,9 @@ comments: false
     </div>
   </div>
   <!-- /pagination -->
+  <!-- 主页只添加Valine统计，不添加评论 -->
+  <div class="comment">
+    {% include comments.html %}
+  </div>
 </section>
 <!-- /section.content -->

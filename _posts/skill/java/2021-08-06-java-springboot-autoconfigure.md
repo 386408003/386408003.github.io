@@ -120,6 +120,8 @@ protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata an
 }
 ```
 
+- 断点后启动程序，执行完这个方法后，可以看到获取到 130 个配置类信息。
+
 ![](/images/posts/java/springboot/20210806162704.png)
 
 - 然后继续跟进进入 getCandidateConfigurations() 这个方法内部。
@@ -236,6 +238,10 @@ org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveRepositor
 org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
 ...
 ```
+
+- spring.factories 文件如图所示。
+
+![](/images/posts/java/springboot/20210806164021.png)
 
 
 
