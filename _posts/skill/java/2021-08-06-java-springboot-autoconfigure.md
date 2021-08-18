@@ -171,7 +171,7 @@ public static List<String> loadFactoryNames(Class<?> factoryType, @Nullable Clas
 }
 ```
 
-- 继续下一步执行 loadSpringFactories() 方法，最终利用工厂加载地到所有组件。
+- 继续下一步执行 loadSpringFactories() 方法，最终利用工厂加载得到所有组件。
 
 ```java
 private static Map<String, List<String>> loadSpringFactories(ClassLoader classLoader) {
