@@ -168,6 +168,40 @@ expdp gscgs/gscgs DIRECTORY=db_bak DUMPFILE=gscgs20170622.dmp TABLESPACES=GSCGS_
 impdp gscgs/gscgs@oraname DIRECTORY=db_bak DUMPFILE=gscgs20170622.dmp TABLESPACES=GSCGS_DATA,GSCGS_DATA_PART2019,GT3_DATA;
 ```
 
+### 11. 模拟 Mysql 主键自增
+
+```sql
+-- 表名
+SELECT * FROM SYS_MENU;
+-- 创建自增序列
+CREATE SEQUENCE SEQ_SYS_MENU_ID
+MINVALUE 1
+NOMAXVALUE
+INCREMENT BY 1
+START WITH 1
+NOCACHE;
+-- 创建表数据插入前的触发器，主键的值从触发器获取
+CREATE OR REPLACE TRIGGER MENU_INSERT_TRIGGER
+  BEFORE INSERT ON SYS_MENU
+  FOR EACH ROW
+BEGIN
+  SELECT SEQ_SYS_MENU_ID.NEXTVAL INTO :NEW.MENU_ID FROM DUAL;
+END;
+/
+-- 最后的斜杠不能少
+```
+
+### 12. Oracle 中的分号和斜杠
+
+```sql
+-- ; 分号表示一个语句的结束
+-- / 表示执行前面的一个代码块
+-- commit; 表示提交一个事务
+-- 命令窗口下，普通语句同时使用 ; 和 / 会导致语句执行两次。
+```
+
+
+
 ## 二、基础语法
 
 ### 1. CASE WHEN 语句
