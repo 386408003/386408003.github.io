@@ -13,7 +13,7 @@ keywords: system, linux, chmod
 1. 今天要把前端页面部署到 nginx，本身特简单一个事情，页面扔服务器，修改 nginx 配置添加一个 server 更新配置完事。
 2. 结果出了幺蛾子，访问页面提示 403 Forbidden ，查日志一看 Permission denied 。
 3. 哎，我用的 Root 启动的 nginx 啊，权限问题？
-4. ps -ef | grep nginx 查看了主进程是 root 后面的 worker(干活的进程) 都是 nobody。
+4.  ps -ef &#124; grep nginx 查看了主进程是 root 后面的 worker(干活的进程) 都是 nobody。
 5. 百度了下也都说用户改一下就行了，或者就是权限修改下，思考了一下还是改权限吧，打开的这个链接刚好有命令，复制粘贴吧。
 6. chmod 755 / home/www/ 没细看，直接粘贴过去修改了一下 chmod 755 / home/dist/
 7. 对，就是这个空格，执行了之后提示了几个 Permission denied ，心里就有点犯嘀咕，什么情况？直觉告诉我不对劲。

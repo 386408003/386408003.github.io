@@ -393,14 +393,14 @@ keywords: markdown, github
    如果 border 属性的值不变，而改变 framespacing 属性值的大小，显示的效果则以 framespacing 的大小为准。
    -->
    
-   <iframe src="//player.bilibili.com/player.html?aid=83622425&bvid=BV1PJ411n7xZ&cid=257415855&page=1" scrolling="no" width="800px" height="700px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+   <iframe src="//player.bilibili.com/player.html?aid=83622425&bvid=BV1PJ411n7xZ&cid=257415855&page=1" scrolling="no" width="800px" height="700px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
    ```
 
 3. 进入 markdown 文档中粘贴到合适位置即可。
 
 
 
-<iframe src="//player.bilibili.com/player.html?aid=83622425&bvid=BV1PJ411n7xZ&cid=257415855&page=1" scrolling="no" width="800px" height="700px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="//player.bilibili.com/player.html?aid=83622425&bvid=BV1PJ411n7xZ&cid=257415855&page=1" scrolling="no" width="700px" height="520px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
