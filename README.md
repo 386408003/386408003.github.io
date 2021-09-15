@@ -140,3 +140,11 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 https://cdn.jsdelivr.net/gh/
 
 待修改：全文搜索 mazhuang.org —— 谷歌广告相关代码
+
+**依赖项目：**
+
+[kityminder-core](https://github.com/386408003/kityminder-core)
+
+[kity](https://github.com/386408003/kity)
+
+[rouge-themes](https://github.com/386408003/rouge-themes)
