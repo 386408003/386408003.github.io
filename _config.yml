@@ -16,7 +16,7 @@ repository: 386408003/386408003.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
   jsdelivr:
-    enabled: true
+    enabled: false
 # 可选组件配置
 components:
   # 分享
@@ -51,8 +51,8 @@ highlight_theme: monokai.sublime
 #      Author      #
 # ---------------- #
 author: 臭粑粑大朱
-organization: 航天金穗
-organization_url: http://www.htjs.net/portal/index_c
+organization: 帆一尚行（郑州）科技有限公司
+organization_url: https://www.fin-shine.com/
 github_username: 386408003
 location: Henan, China
 email: 386408003@qq.com
