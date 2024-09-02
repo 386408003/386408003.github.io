@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://blog.hkyzf.top
+url: https://www.hkyzf.top
 date_format: "ordinal"
 title: 小屁孩的梦
 subtitle: 不忘初心，方得始终
@@ -51,8 +51,8 @@ highlight_theme: monokai.sublime
 #      Author      #
 # ---------------- #
 author: 臭粑粑大朱
-organization: 帆一尚行（郑州）科技有限公司
-organization_url: https://www.fin-shine.com/
+organization: 数字马力（郑州）信息技术有限公司
+organization_url: https://www.digital-engine.com/
 github_username: 386408003
 location: Henan, China
 email: 386408003@qq.com
