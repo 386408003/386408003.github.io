@@ -51,8 +51,8 @@ highlight_theme: monokai.sublime
 #      Author      #
 # ---------------- #
 author: 臭粑粑大朱
-organization: 数字马力（郑州）信息技术有限公司
-organization_url: https://www.digital-engine.com/
+organization: 个人
+organization_url: https://www.hkyzf.top/
 github_username: 386408003
 location: Henan, China
 email: 386408003@qq.com
@@ -124,7 +124,7 @@ collections:
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk, valine
-comments_provider: valine
+comments_provider: false
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
